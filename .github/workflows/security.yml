@@ -39,7 +39,7 @@ jobs:
       # --- Trivy Action: produce SARIF for GitHub Code Scanning (always succeed) ---
       - name: Trivy (SARIF vuln + config)
         id: trivy_sarif
-        uses: aquasecurity/trivy-action@0.32.0
+        uses: aquasecurity/trivy-action@0.33.0
         continue-on-error: true
         with:
           scan-type: fs
@@ -59,7 +59,7 @@ jobs:
       # --- Setup Trivy CLI for SBOM + gating ---
       - name: Setup Trivy CLI
         if: always()
-        uses: aquasecurity/setup-trivy@v0.2.3
+        uses: aquasecurity/setup-trivy@v0.2.4
 
       # --- SBOM (always publish) ---
       - name: Generate SBOM (SPDX JSON)
