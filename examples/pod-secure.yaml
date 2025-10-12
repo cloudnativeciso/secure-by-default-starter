@@ -8,7 +8,7 @@ spec:
     runAsNonRoot: true # Explicitly require non-root execution
   containers:
     - name: app
-      image: nginx:1.29.1-alpine
+      image: nginx:1.29.2-alpine
       ports:
         - containerPort: 8080
       securityContext:
