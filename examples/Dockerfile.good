@@ -1,6 +1,6 @@
 # Secure example: pinned, small, non-root
 # Smaller base images = smaller attack surface
-FROM nginx:1.29.1-alpine
+FROM nginx:1.29.2-alpine
 # Create an unprivileged user and use it.
 RUN adduser -D -u 10001 appuser
 USER 10001:10001
