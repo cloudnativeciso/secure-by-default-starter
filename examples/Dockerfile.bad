@@ -1,0 +1,5 @@
+# Intentionally insecure for demo purposes
+FROM node:latest
+RUN apt-get update && apt-get install -y curl
+# no USER set, runs as root
+# uses :latest tag and extra packages

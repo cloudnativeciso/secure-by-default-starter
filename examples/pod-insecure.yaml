@@ -1,0 +1,14 @@
+# Intentionally insecure for demo purposes
+apiVersion: v1
+kind: Pod
+metadata:
+  name: insecure-pod
+spec:
+  hostNetwork: true
+  containers:
+    - name: app
+      image: nginx:latest
+      securityContext:
+        privileged: true
+        allowPrivilegeEscalation: true
+        runAsUser: 0
